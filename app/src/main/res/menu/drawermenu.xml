@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/account" android:title="Account" />
-    <item android:id="@+id/news" android:title="News"/>
-    <item android:id="@+id/games" android:title="Games"/>
-    <item android:id="@+id/settings" android:title="Settings"/>
-    <item android:id="@+id/favorites" android:title="Favorites"/>
+    <item android:id="@+id/account" android:title="Account" android:icon="@drawable/ic_account_circle_black_24dp"/>
+    <item android:id="@+id/news" android:title="News" android:icon="@drawable/ic_new_releases_black_24dp"/>
+    <item android:id="@+id/games" android:title="Games" android:icon="@drawable/ic_videogame_asset_black_24dp"/>
+    <item android:id="@+id/settings" android:title="Settings" android:icon="@drawable/ic_settings_black_24dp"/>
+    <item android:id="@+id/favorites" android:title="Favorites" android:icon="@drawable/ic_star_black_24dp"/>
 
 </menu>
