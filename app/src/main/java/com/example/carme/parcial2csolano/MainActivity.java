@@ -1,5 +1,6 @@
 package com.example.carme.parcial2csolano;
 
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -80,4 +81,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+
 }
