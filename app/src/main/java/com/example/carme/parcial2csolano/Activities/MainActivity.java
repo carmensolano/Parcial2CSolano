@@ -1,6 +1,5 @@
-package com.example.carme.parcial2csolano;
+package com.example.carme.parcial2csolano.Activities;
 
-import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -10,6 +9,12 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+
+import com.example.carme.parcial2csolano.Fragments.FavoritesFragment;
+import com.example.carme.parcial2csolano.Fragments.GamesFragment;
+import com.example.carme.parcial2csolano.Fragments.NewsFragment;
+import com.example.carme.parcial2csolano.Fragments.SettingsFragment;
+import com.example.carme.parcial2csolano.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,9 +30,9 @@ public class MainActivity extends AppCompatActivity {
         mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close );
         mDrawerLayout.addDrawerListener(mToggle);
         mToggle.syncState();
-        NavigationView nvDrawer = (NavigationView )findViewById(R.id.nv);
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        setupDrawerContent(nvDrawer);
+
     }
 
     @Override

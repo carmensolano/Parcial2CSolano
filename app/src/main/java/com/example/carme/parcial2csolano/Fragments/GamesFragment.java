@@ -1,10 +1,7 @@
-package com.example.carme.parcial2csolano;
+package com.example.carme.parcial2csolano.Fragments;
 
-import android.content.Context;
 import android.graphics.Color;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -15,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.carme.parcial2csolano.R;
 
 
 public class GamesFragment extends Fragment {
@@ -38,7 +36,7 @@ public class GamesFragment extends Fragment {
         // Inflate the layout for this fragment
         View view =inflater.inflate(R.layout.fragment_games, container, false);
          View frame = (View)container.getParent();
-         appBar=(AppBarLayout)frame.findViewById(R.id.appBar);
+         //appBar=(AppBarLayout)frame.findViewById(R.id.appBar);
          tabs= new TabLayout(getActivity());
          tabs.setTabTextColors(Color.parseColor("#ffffff"), Color.parseColor("#ffffff"));
          appBar.addView(tabs);
