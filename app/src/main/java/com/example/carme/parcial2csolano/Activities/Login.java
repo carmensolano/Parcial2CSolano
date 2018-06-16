@@ -62,7 +62,7 @@ public class Login extends AppCompatActivity {
     }
 
     private void doLogin(final String username,final String password){
-        Call call = userService.login(username,password);
+        Call call = userService.loginRequest(username,password);
         call.enqueue(new Callback() {
             @Override
             public void onResponse(Call call, Response response) {

@@ -6,7 +6,21 @@
     android:layout_height="match_parent"
     android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
     android:orientation="vertical"
+    android:gravity="center|bottom"
+    android:background="@drawable/backlogin"
+    android:paddingBottom="100dp"
     >
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="WELCOME TO GAME NEWS"
+        android:textStyle="bold"
+        tools:paddingBottom="100dp"
+        tools:paddingLeft="80dp"
+        tools:textColor="@android:color/white"
+        tools:textSize="18sp" />
 
 
     <TextView

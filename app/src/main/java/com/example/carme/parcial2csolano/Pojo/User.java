@@ -7,14 +7,16 @@ public class User {
     private String password;
     private String created_date;
     private String avatar;
+    private int _v;
 
 
 
-    public User( String user, String password, String created_date, String avatar){
+    public User(String user, String password, String created_date, String avatar, int _v){
         this.user = user;
         this.password = password;
         this.created_date = created_date;
         this.avatar = avatar;
+        this._v = _v;
     }
 
     public User (){}
@@ -57,5 +59,13 @@ public class User {
 
     public void setAvatar(String avatar) {
         this.avatar = avatar;
+    }
+
+    public int get_v() {
+        return _v;
+    }
+
+    public void set_v(int _v) {
+        this._v = _v;
     }
 }
