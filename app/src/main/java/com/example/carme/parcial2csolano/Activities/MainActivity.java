@@ -37,18 +37,24 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar= findViewById(R.id.toolBar);
+        //Toolbar toolbar= findViewById(R.id.toolBar);
         //setSupportActionBar(toolbar);
+        mDrawerLayout = (DrawerLayout)findViewById(R.id.drawerLayout);
+        mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close );
+        mDrawerLayout.addDrawerListener(mToggle);
+        mToggle.syncState();
+        NavigationView nvDrawer = (NavigationView )findViewById(R.id.nav_view);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setupDrawerContent(nvDrawer);
 
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawerLayout);
+      /*  DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawerLayout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.open, R.string.close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener((NavigationView.OnNavigationItemSelectedListener) this);
+        navigationView.setNavigationItemSelectedListener((NavigationView.OnNavigationItemSelectedListener) this);*/
 
 
     }
@@ -105,5 +111,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     }
 
+
+    private void setupDrawerContent(NavigationView navigationView){
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                onNavigationItemSelected(item);
+                return true;
+            }
+        });
+    }
 
 }
